@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routes import router
+from app.routes import user, post
 from app.database import engine
 from app.models import Base
 import uvicorn
@@ -10,7 +10,8 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI()
 
 # Router Registration
-app.include_router(router, prefix="/users", tags=["Users"])
+app.include_router(user.router, prefix="/users", tags=["Users"])
+app.include_router(post.router, prefix="/posts", tags=["Posts"])
 
 @app.get("/")
 def read_root():
