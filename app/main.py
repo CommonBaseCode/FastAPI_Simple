@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.routes import router
-from app.database import Base, engine
+from app.database import engine
+from app.models import Base
 import uvicorn
 
 # Creating a Database Table
