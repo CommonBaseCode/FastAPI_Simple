@@ -7,7 +7,7 @@
 + pip install pytest
 + pytest
 
-### API 테스트트
+### API 테스트
 + http://127.0.0.1:8000/로 접속
 + Swagger 문서: http://127.0.0.1:8000/docs
 + Redoc 문서: http://127.0.0.1:8000/redoc
